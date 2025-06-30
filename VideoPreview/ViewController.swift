@@ -49,7 +49,7 @@ private extension ViewController {
     
     @objc
     func panGestureCall(_ sender: UIPanGestureRecognizer) {
-        let point = sender.translation(in: view) // mark 3
+        let point = sender.translation(in: view)
         videoPreview.center = CGPoint(x: videoPreview.center.x + point.x, y: videoPreview.center.y + point.y)
         sender.setTranslation(CGPoint.zero, in: view)
     }
