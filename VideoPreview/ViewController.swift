@@ -37,8 +37,10 @@ private extension ViewController {
         videoPreview.translatesAutoresizingMaskIntoConstraints = false
         videoPreview.widthAnchor.constraint(equalToConstant: 100).isActive = true
         videoPreview.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        videoPreview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        videoPreview.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        videoPreview.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
+        videoPreview.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
+//        videoPreview.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        videoPreview.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
     
     func setupPanGesture() {
